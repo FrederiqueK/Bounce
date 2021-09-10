@@ -1,15 +1,20 @@
+bal = new Bal(50, 100);
+
+
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
 
-var x = 50;
-var y = 50;
-var speedX = 5;
-var speedY = 5;
+var x = 50; 
+var y = 50; 
+var speedX = 5; 
+var speedY = 5; 
 var ellipsBreedte = 80;
 var ellipsHoogte = 80;
+
+
 
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
@@ -30,8 +35,14 @@ function draw() {
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('black');
 
+  bal.show();
+  bal.update();
+
   // teken een cirkel
   ellipse(x,y,ellipsBreedte,ellipsHoogte);
+
+  // for (var i = 0; i < x.length, i++)
+  // x[i] = x[i] + speedX[i]
 
   // positie van bal updaten
   x = x + speedX;
