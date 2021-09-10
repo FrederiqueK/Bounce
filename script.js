@@ -6,8 +6,10 @@
 
 var x = 50;
 var y = 50;
-var speedX = 2;
-var speedY = 1;
+var speedX = 5;
+var speedY = 5;
+var ellipsBreedte = 80;
+var ellipsHoogte = 80;
 
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
@@ -26,20 +28,20 @@ function draw() {
   fill(100, 100, 255);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('red');
+  background('black');
 
   // teken een cirkel
-  ellipse(x,y,80,80);
+  ellipse(x,y,ellipsBreedte,ellipsHoogte);
 
   // positie van bal updaten
   x = x + speedX;
   y = y + speedY;
 
-  if (y === 680) {
+  if (y >= 720 - (ellipsHoogte * 0.5) || y <= ellipsHoogte * 0.5) {
     speedY = speedY * -1;
   }
 
-  if (x === 1240) {
+  if (x >= 1280 - (ellipsBreedte * 0.5) || x <= ellipsBreedte * 0.5) {
     speedX = speedX * -1;
   }
 
