@@ -1,5 +1,4 @@
-bal = new Bal(50, 100);
-
+var ballen = [];
 
 /**
  * setup
@@ -11,14 +10,18 @@ var x = 50;
 var y = 50; 
 var speedX = 5; 
 var speedY = 5; 
-var ellipsBreedte = 80;
-var ellipsHoogte = 80;
 
 
 
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
+  for(var i = 0; i < bal.length; i++) {
+  var randomX = random(50, 1230);
+  var randomY = random(50, 670);
+  var randomSpeedX = random(-5, 5);
+  var randomSpeedY = random(-5, 5);
+  }
 }
 
 
@@ -35,25 +38,12 @@ function draw() {
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('black');
 
-  bal.show();
-  bal.update();
+ for(var i = 0; i < ballen.length; i++) {
+ballen[i].show
+ballen[i].update();
 
-  // teken een cirkel
-  ellipse(x,y,ellipsBreedte,ellipsHoogte);
+ }
 
-  // for (var i = 0; i < x.length, i++)
-  // x[i] = x[i] + speedX[i]
 
-  // positie van bal updaten
-  x = x + speedX;
-  y = y + speedY;
-
-  if (y >= 720 - (ellipsHoogte * 0.5) || y <= ellipsHoogte * 0.5) {
-    speedY = speedY * -1;
-  }
-
-  if (x >= 1280 - (ellipsBreedte * 0.5) || x <= ellipsBreedte * 0.5) {
-    speedX = speedX * -1;
-  }
 
 }
