@@ -1,7 +1,6 @@
 // globale variabelen
 var ballen = [];
 
-
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -22,9 +21,13 @@ function setup() {
     ballen.push(bal);
   }
 
+  var superbal = new Superbal(400, 300, 10, 10);
+  ballen.push(superbal);
+  
+  var nummerbal = new nummer(200, 100, 10, 10);
+  ballen.push(nummerbal);
 
 }
-
 
 /**
  * draw
